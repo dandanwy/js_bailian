@@ -1,0 +1,432 @@
+#header_login {
+  height: 110px;
+}
+
+#header_login .wrap {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#header_login .wrap .header_logo {
+  float: left;
+  margin-top: 29px;
+}
+
+#main_login {
+  padding: 30px 0 25px 0;
+  background: url("../img/login-body.jpg") no-repeat center bottom;
+}
+
+#main_login .login_cont {
+  width: 488px;
+  margin: 0px auto;
+  border: 6px solid #e2e2e2;
+  background: #fff;
+}
+
+#main_login .login_cont .login_main_center {
+  width: 300px;
+  margin: 0px auto;
+  padding: 45px 0px;
+  position: relative;
+}
+
+#main_login .login_cont .login_main_center ul li .login_title {
+  height: 50px;
+  line-height: 45px;
+}
+
+#main_login .login_cont .login_main_center ul li .login_title .login-title-fl {
+  font-size: 18px;
+  color: #000000;
+}
+
+#main_login .login_cont .login_main_center ul li .login_title .login-title-fr {
+  font-size: 12px;
+  color: #0088cc;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item input {
+  padding-left: 35px;
+  width: 250px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .inp {
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  text-indent: 0;
+  color: #000;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .inp-primary {
+  height: 34px;
+  width: 232px;
+  background: #fff;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid #cccccc;
+  padding: 0 12px;
+  padding-left: 35px;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .inp-primary:hover {
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 3px #ccc;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .inp-primaryblur {
+  height: 32px;
+  width: 232px;
+  background: #fff;
+  font-size: 14px;
+  color: #444444;
+  border: 2px solid #f77799;
+  box-shadow: 0px 0px 3px #f77799;
+  -webkit-box-shadow: 0px 0px 3px #f77799;
+  padding: 0 11px;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .radius {
+  border-radius: 0px;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .input-w145 {
+  width: 140px !important;
+  float: left;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .newicon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#main_login .login_cont .login_main_center ul li .login-item .ml-img {
+  margin-left: 10px;
+  float: left;
+}
+
+#main_login .login_cont .login_main_center ul li .login-font {
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 10px;
+  clear: both;
+  color: #666666;
+}
+
+#main_login .login_cont .login_main_center ul li .btn {
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  transition: all 0.08s ease-in;
+}
+
+#main_login .login_cont .login_main_center ul li .btn-primary {
+  color: #ffffff;
+  background: #e6133c;
+  font-size: 16px;
+  height: 36px;
+  width: 136px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+#main_login .login_cont .login_main_center ul li .login-button {
+  width: 100% !important;
+  font-size: 16px !important;
+}
+
+#main_login .login_cont .login_main_center .login-font-right {
+  height: 52px;
+  text-align: right;
+  line-height: 52px;
+}
+
+#main_login .login_cont .login_main_center .login-font-right a {
+  background: url("../img/right-icon.png") no-repeat left;
+  padding-left: 23px;
+  color: #666666;
+}
+
+#main_login .login_cont .login_main_center .other-login {
+  height: 49px;
+  line-height: 49px;
+}
+
+#main_login .login_cont .login_main_center .other-login .other-login-bottom {
+  height: 24px;
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  line-height: 49px;
+}
+
+#main_login .login_cont .login_main_center .other-login .other-login-bottom span {
+  background: #fff;
+  padding: 0px 15px;
+  color: #999;
+  line-height: 49px;
+}
+
+#main_login .login_cont .login_main_center .login-logo {
+  width: 320px;
+  margin-left: -10px;
+  height: 22px;
+  margin-top: 10px;
+  height: 22px;
+  text-align: center;
+}
+
+#main_login .login_cont .login_main_center .login-logo a {
+  display: inline-block;
+  width: 66px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
+  float: left;
+  margin: 0 0 10px 30px;
+}
+
+#main_login .login_cont .login_main_center .login-logo a:hover {
+  background-position: center top;
+}
+
+#footer_login {
+  min-width: 950px;
+  margin: 0px auto;
+  clear: both;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+#footer_login .bottom-nav {
+  line-height: 24px;
+  text-align: center;
+  padding-top: 10px;
+  color: #cccccc;
+}
+
+#footer_login .bottom-nav a {
+  color: #003333;
+}
+
+#footer_login .bottom-nav span {
+  padding: 0px 10px;
+}
+
+#footer_login .bottom-nav .copyright {
+  color: #999999;
+}
+
+#footer_login .bottom-contact {
+  line-height: 20px;
+  text-align: center;
+  color: #999999;
+  padding: 10px 0px;
+}
+
+#footer_login .bottom-contact p span {
+  padding: 0px 10px;
+  color: #666666;
+}
+
+body {
+  background: #f9f9f8 !important;
+}
+
+#main_register {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#main_register .main {
+  margin: 0 auto;
+}
+
+#main_register .main .main_center {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e1dfda;
+}
+
+#main_register .main .main_center .center_top {
+  height: 30px;
+  border-bottom: 1px solid #e1dfda;
+  padding: 10px 20px;
+  line-height: 30px;
+}
+
+#main_register .main .main_center .center_top .title-info {
+  font-size: 16px;
+  color: #ff002a;
+}
+
+#main_register .main .main_center .center_top .title-login {
+  color: #63625d;
+}
+
+#main_register .main .main_center .center_top .title-login a {
+  color: #0088cc;
+}
+
+#main_register .main .main_center .center_bottom {
+  padding: 50px 0px 74px 191px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered {
+  position: relative;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data {
+  padding: 10px 0px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .name {
+  font-size: 15px;
+  font-family: 'Microsoft YaHei';
+  color: #333333;
+  float: left;
+  width: 136px;
+  text-align: right;
+  line-height: 36px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .name i {
+  color: #df3d36;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div {
+  padding-left: 5px;
+  display: inline;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input {
+  position: relative;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input input {
+  line-height: 34px;
+  font-size: 16px;
+  vertical-align: middle;
+  padding: 0 10px 0 30px;
+  text-indent: 0px;
+  font-size: 12px;
+  font-family: 'Microsoft YaHei';
+  color: #000;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .index-1 {
+  width: 258px;
+  background: #ffffff url("../img/register.png") no-repeat 10px 9px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .index-2 {
+  width: 258px;
+  background: #ffffff url("../img/register.png") no-repeat 10px -180px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .index-3 {
+  width: 158px;
+  background: #ffffff url("../img/register.png") no-repeat 10px -51px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .index-4 {
+  width: 258px;
+  background: #ffffff url("../img/register.png") no-repeat 10px -52px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .index-5 {
+  width: 258px;
+  background: #ffffff url("../img/register.png") no-repeat 10px -287px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .inp {
+  border-radius: 2px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .loginPerfect-input-div .loginPerfect-input .inp-primary {
+  height: 34px;
+  border: 1px solid #cccccc;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .register-code {
+  float: left;
+  width: 90px;
+  height: 36px;
+  margin: 0 11px 0 10px;
+  background: pink;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .ftx23 {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  color: #706e69;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .ftx23 a {
+  color: #0084cc;
+  text-decoration: underline;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .input-prompt {
+  float: left;
+  line-height: 36px;
+  margin-left: 10px;
+  color: #999999;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .input-prompt button {
+  width: 90px;
+  height: 36px;
+  border: 1px solid #c8c8c8;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-remember {
+  height: 25px;
+  padding-left: 140px;
+  line-height: 18px;
+  overflow: hidden;
+  padding-top: 5px;
+  color: #666666;
+  background: #fff;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-remember label {
+  float: left;
+  cursor: pointer;
+  outline: none;
+  padding-right: 10px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-remember label .clicked {
+  background: url("../img/register.png") no-repeat 0 -473px;
+  border: none;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-top: 2px;
+  float: left;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-remember label span {
+  float: left;
+  margin-left: 24px;
+  display: inline;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-remember a {
+  color: #0088ca !important;
+}

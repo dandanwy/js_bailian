@@ -1,0 +1,169 @@
+@import 'login.scss';
+
+body{
+    background: #f9f9f8 !important;
+}
+
+#main_register{
+    width: 950px;
+    margin: 0 auto;
+    .main{
+        margin: 0 auto;
+        .main_center{
+            width: 100%;
+            height: auto;
+            background: #fff;
+            border: 1px solid #e1dfda;
+            .center_top{
+                height: 30px;
+                border-bottom: 1px solid #e1dfda;
+                padding: 10px 20px;
+                line-height: 30px;
+                .title-info{
+                    font-size: 16px;
+                    color: #ff002a;
+                }
+                .title-login{
+                    color: #63625d;
+                    a{
+                        color: #0088cc;
+                    }
+                }
+            }
+            .center_bottom{
+                // height: auto;
+                padding: 50px 0px 74px 191px;
+                .registered-info{
+                    form{
+                        .registered{
+                            position: relative;
+                            .loginPerfect-element{
+                                .loginPerfect-data{
+                                    padding: 10px 0px;
+                                    .name{
+                                        font-size: 15px;
+                                        font-family: 'Microsoft YaHei';
+                                        color: #333333;
+                                        float: left;
+                                        width: 136px;
+                                        text-align: right;
+                                        line-height: 36px;
+                                        i{    
+                                            color: #df3d36;
+                                        }
+                                    }
+                                    .loginPerfect-input-div{
+                                        padding-left: 5px;
+                                        display: inline;
+                                        .loginPerfect-input{
+                                            position: relative;
+                                            input{
+                                                line-height: 34px;
+                                                font-size: 16px;
+                                                vertical-align: middle;
+                                                padding: 0 10px 0 30px;
+                                                text-indent: 0px;
+                                                font-size: 12px;
+                                                font-family: 'Microsoft YaHei';
+                                                color: #000;
+                                            }
+                                            .index-1{
+                                                width: 258px;
+                                                background: #ffffff url('../img/register.png') no-repeat 10px 9px;
+                                            }
+                                            .index-2{
+                                                width: 258px;
+                                                background: #ffffff url('../img/register.png') no-repeat 10px -180px;
+                                            }
+                                            .index-3{
+                                                width: 158px;
+                                                background: #ffffff url('../img/register.png') no-repeat 10px -51px;
+                                            }
+                                            .index-4{
+                                                width: 258px;
+                                                background: #ffffff url('../img/register.png') no-repeat 10px -52px;
+                                            }
+                                            .index-5{
+                                                width: 258px;
+                                                background: #ffffff url('../img/register.png') no-repeat 10px -287px;
+                                            }
+                                            .inp{
+                                                border-radius: 2px;
+                                            }
+                                            .inp-primary{
+                                                height: 34px;
+                                                border: 1px solid #cccccc;
+                                            }
+                                        }
+                                    }
+                                    .register-code{
+                                        float: left;
+                                        width: 90px;
+                                        height: 36px;
+                                        margin: 0 11px 0 10px;
+                                        background:pink;
+                                    }
+                                    .ftx23{
+                                        float: left;
+                                        height: 36px;
+                                        line-height: 36px;
+                                        color: #706e69;
+                                        a{
+                                            color: #0084cc;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    .input-prompt{
+                                        float: left;
+                                        line-height: 36px;
+                                        margin-left: 10px;
+                                        color: #999999;
+                                        button{
+                                            width: 90px;
+                                            height: 36px;
+                                            border: 1px solid #c8c8c8;
+                                            background: #f5f5f5;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                                .loginPerfect-remember{
+                                    height: 25px;
+                                    padding-left: 140px;
+                                    line-height: 18px;
+                                    overflow: hidden;
+                                    padding-top: 5px;
+                                    color: #666666;
+                                    background: #fff;
+                                    label{
+                                        float: left;
+                                        cursor: pointer;
+                                        outline: none;
+                                        padding-right: 10px;
+                                        .clicked{
+                                            background: url('../img/register.png') no-repeat 0 -473px;
+                                            border: none;
+                                            width: 13px;
+                                            height: 13px;
+                                            display: inline-block;
+                                            margin-top: 2px;
+                                            float: left;
+                                        }
+                                        span{
+                                            float: left;
+                                            margin-left: 24px;
+                                            display: inline;
+                                        }
+                                    }
+                                    a{
+                                        color: #0088ca !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

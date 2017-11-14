@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-13 20:56:51
+* @Last Modified time: 2017-11-14 16:03:12
 */
 
 jQuery(function($){
@@ -196,5 +196,14 @@ jQuery(function($){
 
     var lbt = new Fade({
         imgs:["img/banner01.jpg","img/banner02.jpg","img/banner03.jpg","img/banner04.jpg","img/banner05.jpg","img/banner06.jpg","img/banner07.jpg","img/banner08.jpg","img/banner09.jpg","img/banner10.jpg"]
+    });
+
+
+    // 动画
+    // 超值团动画
+    var $new_czt_l = $('.new_czt_l');
+    $new_czt_l.on('mouseenter','img',function(){
+        console.log(666);
+        $(this).animate({width:300}, 50);
     });
 });

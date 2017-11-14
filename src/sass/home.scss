@@ -1058,6 +1058,13 @@ body{
         height: 250px;
         overflow: hidden;
         float: left;
+        &:hover{
+            img{
+               
+               transition:scale(1.5);
+            }
+            
+        }
     }
     .new_czt_r{
         width: 965px;

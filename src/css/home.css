@@ -1211,6 +1211,10 @@ body {
   float: left;
 }
 
+.new_czt .new_czt_l:hover img {
+  transition: scale(1.5);
+}
+
 .new_czt .new_czt_r {
   width: 965px;
   height: 248px;

@@ -1058,12 +1058,13 @@ body{
         height: 250px;
         overflow: hidden;
         float: left;
-        &:hover{
+        a{
             img{
-               
-               transition:scale(1.5);
+                transition: all .3s ease-in-out;
+                &:hover{
+                    transform:scale(1.1);
+                }
             }
-            
         }
     }
     .new_czt_r{
@@ -1124,15 +1125,22 @@ body{
     height: 370px;
     background: #fff;
     padding-bottom: 20px;
+    a{
+        img{
+            transition: all .3s ease-in-out;
+        }
+        &:hover{
+            img{
+                transform:scale(1.1);
+            }
+        }
+    }
     .new_tm_l{
         width: 305px;
         height: 370px;
         float: left;
-        a{
-            img{
-                transition: all .3s ease-in-out;
-            }
-        }
+        overflow:hidden;
+        
     }
     .new_tm_r{
         width: 885px;
@@ -1144,6 +1152,7 @@ body{
             margin-left: 10px;
             float: left;
             margin-bottom: 10px;
+            overflow:hidden;
         }
     }
 }

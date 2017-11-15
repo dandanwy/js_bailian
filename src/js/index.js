@@ -2,10 +2,15 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-14 16:03:12
+* @Last Modified time: 2017-11-15 20:50:28
 */
 
-jQuery(function($){
+require.config({
+    paths:{
+        jquery:'../lib/jquery/jquery-3.2.1'
+    }
+})
+require(['common','jquery'],function(com,$){
     // header
     // 头部搜索
     var $search_txt = $('.search_txt');
@@ -187,6 +192,9 @@ jQuery(function($){
         },
         dotPlay(idx){
             this.index = idx;
+            if(this.index == this.lastIndex){
+                return;
+            }
             this.fade();
         }
     }    
@@ -198,12 +206,5 @@ jQuery(function($){
         imgs:["img/banner01.jpg","img/banner02.jpg","img/banner03.jpg","img/banner04.jpg","img/banner05.jpg","img/banner06.jpg","img/banner07.jpg","img/banner08.jpg","img/banner09.jpg","img/banner10.jpg"]
     });
 
-
-    // 动画
-    // 超值团动画
-    var $new_czt_l = $('.new_czt_l');
-    $new_czt_l.on('mouseenter','img',function(){
-        console.log(666);
-        $(this).animate({width:300}, 50);
-    });
 });
+

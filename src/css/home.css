@@ -1211,8 +1211,12 @@ body {
   float: left;
 }
 
-.new_czt .new_czt_l:hover img {
-  transition: scale(1.5);
+.new_czt .new_czt_l a img {
+  transition: all .3s ease-in-out;
+}
+
+.new_czt .new_czt_l a img:hover {
+  transform: scale(1.1);
 }
 
 .new_czt .new_czt_r {
@@ -1279,14 +1283,19 @@ body {
   padding-bottom: 20px;
 }
 
+.new_tm a img {
+  transition: all .3s ease-in-out;
+}
+
+.new_tm a:hover img {
+  transform: scale(1.1);
+}
+
 .new_tm .new_tm_l {
   width: 305px;
   height: 370px;
   float: left;
-}
-
-.new_tm .new_tm_l a img {
-  transition: all .3s ease-in-out;
+  overflow: hidden;
 }
 
 .new_tm .new_tm_r {
@@ -1301,6 +1310,7 @@ body {
   margin-left: 10px;
   float: left;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .floor {

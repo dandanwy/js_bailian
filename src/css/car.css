@@ -1,0 +1,31 @@
+#main .warp {
+  width: 990px;
+  margin: 0 auto;
+}
+
+#main .warp .cart-title {
+  width: 990px;
+  height: 51px;
+  border-bottom: 1px solid #ccc;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-title .name {
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 6px;
+  margin-top: 18px;
+  float: left;
+  display: inline;
+  border-bottom: 2px solid #333;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#main .warp .cart-title .name .cart-title .name span {
+  color: #e6133c;
+  margin-left: 4px;
+}

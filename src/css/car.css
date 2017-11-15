@@ -25,7 +25,662 @@
   font-weight: 700;
 }
 
-#main .warp .cart-title .name .cart-title .name span {
+#main .warp .cart-title .name span {
   color: #e6133c;
   margin-left: 4px;
+}
+
+#main .warp .cart-title .send-message {
+  width: auto;
+  height: 48px;
+  line-height: 48px;
+  float: right;
+  display: inline;
+  margin-top: 3px;
+  color: #333;
+}
+
+#main .warp .cart-title .send-message .message-name {
+  color: #666;
+  width: auto;
+  float: left;
+  display: inline;
+  margin-right: 4px;
+}
+
+#main .warp .cart-title .send-message .address-line {
+  width: auto;
+  height: 24px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+#main .warp .cart-title .send-message .address-line .address-name {
+  width: auto;
+  padding: 0 30px 0 10px;
+  line-height: 24px;
+  position: relative;
+  float: left;
+  display: inline;
+  color: #333;
+  cursor: pointer;
+  background: #fff;
+}
+
+#main .warp .cart-title .send-message .address-line .address-name i {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 5px solid #999;
+  position: absolute;
+  right: 5px;
+  top: 9px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table {
+  width: 990px;
+  height: auto;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-head {
+  width: 990px;
+  height: 44px;
+  line-height: 44px;
+  color: #333;
+  float: left;
+  display: inline;
+  border-bottom: 1px solid #ccc;
+}
+
+#main .warp .cart-table .cart-head .chk-line {
+  width: 50px;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  display: inline;
+  margin-left: 15px;
+}
+
+#main .warp .cart-table .cart-head .chk-line .chk {
+  margin-top: 17px;
+  float: left;
+  display: inline;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+#main .warp .cart-table .cart-head .chk-line .name {
+  height: 44px;
+  line-height: 44px;
+  margin-left: 10px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-head .select .chk {
+  border-color: #d62233;
+  background: url("../img/select.png") #d62233 no-repeat;
+}
+
+#main .warp .cart-table .cart-head .item {
+  width: 390px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  display: inline;
+  margin-left: 80px;
+}
+
+#main .warp .cart-table .cart-head .item-price {
+  width: 138px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-head .number {
+  width: 102px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-head .total-price {
+  width: 132px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-head .action {
+  width: 64px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-name {
+  width: 990px;
+  height: 34px;
+  line-height: 34px;
+  float: left;
+  display: inline;
+  margin-top: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+#main .warp .cart-table .cart-table-name .chk-line {
+  width: auto;
+  height: 34px;
+  line-height: 34px;
+  float: left;
+  display: inline;
+  margin-left: 15px;
+}
+
+#main .warp .cart-table .cart-table-name .chk-line .chk {
+  margin-top: 12px;
+  float: left;
+  display: inline;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+#main .warp .cart-table .cart-table-name .chk-line .shop {
+  background-position: 0 -39px;
+  margin-top: 11px;
+}
+
+#main .warp .cart-table .cart-table-name .chk-line i {
+  width: 13px;
+  height: 13px;
+  float: left;
+  display: inline;
+  background: url("../img/cart_icon.png") no-repeat;
+  margin: 10px 0 0 12px;
+}
+
+#main .warp .cart-table .cart-table-name .chk-line .name {
+  height: 34px;
+  line-height: 34px;
+  margin-left: 10px;
+  float: left;
+  display: inline;
+  font-size: 14px;
+}
+
+#main .warp .cart-table .cart-table-name .package-message {
+  width: auto;
+  height: 34px;
+  line-height: 34px;
+  float: right;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-name .package-message .package-price {
+  width: auto;
+  height: 34px;
+  position: relative;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-list {
+  width: 990px;
+  height: auto;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-list .select {
+  background: url("../img/cart-line-first.png") #fffaf1 left top no-repeat;
+}
+
+#main .warp .cart-table .cart-table-list .select .chk {
+  border-color: #d62233;
+  background: url("../img/select.png") #d62233 no-repeat;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line {
+  width: 932px;
+  height: 40px;
+  margin-left: 38px;
+  float: left;
+  display: inline;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line .point {
+  position: absolute;
+  top: 18px;
+  left: -21px;
+  float: left;
+  display: inline;
+  width: 10px;
+  height: 10px;
+  color: #ccc;
+  font-size: 22px;
+  line-height: 10px;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line .message {
+  width: 480px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  float: left;
+  display: inline;
+  overflow: hidden;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line .message .link {
+  color: #0079d7;
+  text-decoration: none;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line .item-price {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 0 15px;
+  float: left;
+  display: inline;
+  color: #333;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line .else-message {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  float: right;
+  display: inline;
+  overflow: hidden;
+  text-align: right;
+}
+
+#main .warp .cart-table .cart-table-list li .active-line .else-message .red {
+  color: #e6133c;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last {
+  background: url("../img/cart-line-last.png") left top no-repeat;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line {
+  width: 990px;
+  height: 110px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .chk-line {
+  width: 35px;
+  height: 80px;
+  float: left;
+  display: inline;
+  margin: 15px 0 0 5px;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .chk-line .chk {
+  float: left;
+  display: inline;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #999;
+  margin-left: 10px;
+  font-size: 16px;
+  position: relative;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-box {
+  width: 300px;
+  height: 80px;
+  margin-top: 15px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-box img {
+  width: 78px;
+  height: 78px;
+  border: 1px solid #ddd;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-box .name {
+  width: 200px;
+  height: 36px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-box .message-line {
+  width: 210px;
+  height: 18px;
+  float: left;
+  display: inline;
+  margin-top: 2px;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .type-box {
+  width: 160px;
+  height: 80px;
+  float: left;
+  display: inline;
+  padding: 15px 10px 14px;
+  overflow: hidden;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-price-box {
+  width: 120px;
+  height: 80px;
+  line-height: 18px;
+  margin: 15px 0 0 15px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-price-box del {
+  width: 120px;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  color: #999;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-price-box .price {
+  width: 120px;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  color: #000;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-price-box .icon {
+  width: 120px;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  margin-top: 2px;
+  color: #fff;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-price-box .icon .orange {
+  background: #efae00;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .item-price-box .icon i {
+  width: auto;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  margin-right: 4px;
+  color: #fff;
+  padding: 0 4px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .number-box {
+  width: 80px;
+  height: 60px;
+  line-height: 18px;
+  color: #333;
+  float: left;
+  display: inline;
+  margin-top: 15px;
+  position: relative;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .number-box .reduce {
+  border-right: 0 none;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .number-box .add {
+  border-left: 0 none;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .number-box em {
+  width: 17px;
+  height: 24px;
+  line-height: 24px;
+  background: #f0f0f0;
+  margin-top: 2px;
+  float: left;
+  display: inline;
+  border: 1px solid #eee;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .number-box .text {
+  width: 40px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #aaa;
+  color: #333;
+  text-align: center;
+  float: left;
+  display: inline;
+  margin-top: 2px;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .price-box {
+  width: 100px;
+  height: 80px;
+  margin-left: 40px;
+  margin-top: 15px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .price-box .price {
+  width: 100px;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  color: #d62233;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .action-box {
+  width: 62px;
+  height: 80px;
+  float: right;
+  display: inline;
+  margin-right: 20px;
+  line-height: 18px;
+  margin-top: 15px;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .action-box .add-favourite {
+  color: #333;
+}
+
+#main .warp .cart-table .cart-table-list li .border-last .cart-table-line .action-box .delete {
+  color: #999;
+}
+
+#main .warp .cart-table .cart-table-list li .item {
+  width: 990px;
+  height: auto;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form {
+  width: 990px;
+  height: auto;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+  float: left;
+  display: inline;
+  margin-top: 20px;
+  position: relative;
+}
+
+#main .warp .pay-form .pay-line {
+  width: 990px;
+  height: 50px;
+  background: #f3f3f3;
+  line-height: 50px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form .pay-line .select-all {
+  margin: 0 15px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form .pay-line .select-all .chk {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #999;
+  float: left;
+  display: inline;
+  margin-top: 19px;
+}
+
+#main .warp .pay-form .pay-line .select-all .txt {
+  margin-left: 4px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form .pay-line .select .chk {
+  border-color: #d62233;
+  background: url("../img/select.png") #d62233 no-repeat;
+}
+
+#main .warp .pay-form .pay-line a.txt {
+  width: auto;
+  height: 22px;
+  line-height: 24px;
+  color: #666;
+  margin: 13px 20px 0 0;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form .pay-line a.txt i {
+  width: 16px;
+  height: 16px;
+  float: left;
+  display: inline;
+  margin-top: 4px;
+  background: url("../img/cart_icon.png") 0 -133px no-repeat;
+}
+
+#main .warp .pay-form .pay-line a.pay {
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  float: right;
+  display: inline;
+  background: #d62233;
+  font-family: "Microsoft YaHei";
+  font-size: 20px;
+}
+
+#main .warp .pay-form .pay-line .message {
+  width: 270px;
+  height: 42px;
+  float: right;
+  display: inline;
+  margin-right: 10px;
+  margin-top: 4px;
+  text-align: right;
+}
+
+#main .warp .pay-form .pay-line .message .price-line {
+  width: 270px;
+  height: 24px;
+  line-height: 24px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form .pay-line .message .price-line .black {
+  color: #333;
+}
+
+#main .warp .pay-form .pay-line .message .price-line .price {
+  color: #d62233;
+  font-size: 18px;
+}
+
+#main .warp .pay-form .pay-line .message .reduce-line {
+  width: 270px;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+}
+
+#main .warp .pay-form .pay-line .message .reduce-line .grey {
+  color: #999;
+}
+
+#main .warp .pay-form .pay-line .message .reduce-line .black {
+  color: #333;
+}
+
+#main .warp .pay-form .pay-line .item-show {
+  width: auto;
+  max-width: 270px;
+  float: right;
+  display: inline;
+  height: 24px;
+  line-height: 24px;
+  margin-top: 13px;
+  color: #000;
+  text-decoration: none;
+}
+
+#main .warp .pay-form .pay-line .item-show span {
+  color: #d62233;
 }

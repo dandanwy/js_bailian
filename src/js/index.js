@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-15 20:50:28
+* @Last Modified time: 2017-11-16 09:01:58
 */
 
 require.config({
@@ -57,7 +57,7 @@ require(['common','jquery'],function(com,$){
         $(this).stop().next('.doudou').animate({top:0}, 300);
     });
 
-    // banner
+    // banner  淡入淡出 
     function Fade(options){
         // 默认属性
         var defaults = {
@@ -204,6 +204,18 @@ require(['common','jquery'],function(com,$){
 
     var lbt = new Fade({
         imgs:["img/banner01.jpg","img/banner02.jpg","img/banner03.jpg","img/banner04.jpg","img/banner05.jpg","img/banner06.jpg","img/banner07.jpg","img/banner08.jpg","img/banner09.jpg","img/banner10.jpg"]
+    });
+
+    // 楼梯图片左移动画
+    var $floor_main = $('.floor_main');
+    $floor_main.on('mouseenter','img',function(){
+        // $(this).css({'position':'absolute'});
+        $(this).stop().animate({left:-10}, 300);
+    });
+
+    $floor_main.on('mouseleave','img',function(){
+        // $(this).css({'position':'absolute'});
+        $(this).stop().animate({left:0}, 300);
     });
 
 });

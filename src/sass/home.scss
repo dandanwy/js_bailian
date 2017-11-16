@@ -1205,9 +1205,13 @@ body{
             border-right-width: 1px;
             border-right-style: solid;
             background: #fff;
-            img{
-                display: inline-block;
-                vertical-align: middle;
+            .floor_img{
+                position:relative;
+                img{
+                    display: inline-block;
+                    vertical-align: middle;
+                    position:absolute;
+                }
             }
             .floor_maint{
                 border-color: #dbeaa8;

@@ -1371,9 +1371,14 @@ body {
   background: #fff;
 }
 
-.floor .floor_box .floor_main img {
+.floor .floor_box .floor_main .floor_img {
+  position: relative;
+}
+
+.floor .floor_box .floor_main .floor_img img {
   display: inline-block;
   vertical-align: middle;
+  position: absolute;
 }
 
 .floor .floor_box .floor_main .floor_maint {

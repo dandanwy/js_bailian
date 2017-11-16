@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 09:23:50
+* @Last Modified time: 2017-11-16 11:27:41
 */
 
 require.config({
@@ -221,11 +221,49 @@ require(['common','jquery'],function(com,$){
     var $floor_mainb_b = $('.floor_mainb_b');
     $floor_mainb_b.on('mouseenter','a',function(){
         $(this).fadeTo(300,0.5);
-        console.log(444);
     });
     $floor_mainb_b.on('mouseleave','a',function(){
         $(this).fadeTo(300,1);
-        console.log(444);
     });
+
+    // 楼层里面的轮播
+    function scroll(){
+        $("#floor1 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor1 .floor_slidew ul li:eq(0)").appendTo($("#floor1 .floor_slidew ul"));
+            $("#floor1 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor2 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor2 .floor_slidew ul li:eq(0)").appendTo($("#floor2 .floor_slidew ul"));
+            $("#floor2 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor3 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor3 .floor_slidew ul li:eq(0)").appendTo($("#floor3 .floor_slidew ul"));
+            $("#floor3 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor4 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor4 .floor_slidew ul li:eq(0)").appendTo($("#floor4 .floor_slidew ul"));
+            $("#floor4 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor5 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor5 .floor_slidew ul li:eq(0)").appendTo($("#floor5 .floor_slidew ul"));
+            $("#floor5 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor6 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor6 .floor_slidew ul li:eq(0)").appendTo($("#floor6 .floor_slidew ul"));
+            $("#floor6 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor7 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor7 .floor_slidew ul li:eq(0)").appendTo($("#floor7 .floor_slidew ul"));
+            $("#floor7 .floor_slidew ul").css({"margin-left":0});
+        });
+        $("#floor8 .floor_slidew ul").stop().animate({"margin-left":"-306px"},function(){
+            $("#floor8 .floor_slidew ul li:eq(0)").appendTo($("#floor8 .floor_slidew ul"));
+            $("#floor8 .floor_slidew ul").css({"margin-left":0});
+        });
+    }
+    // var timer = setInterval(scroll,3000);
+    // $("#floor1 .floor_slidew ul").on('mouseenter',function(){
+    //     // $("#floor1 .floor_slidew ul").stop();
+    // });
 });
 

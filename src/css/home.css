@@ -1351,12 +1351,18 @@ body {
   height: 422px;
   line-height: 422px;
   margin-left: 0;
+  width: 1000px;
 }
 
 .floor .floor_box .floor_slide .floor_slidew .main-top-scroll li {
-  width: 100%;
   height: 425px;
   float: left;
+}
+
+.floor .floor_box .floor_slide .floor_slidew .main-top-scroll li img {
+  display: inline;
+  width: 306px;
+  height: 422px;
 }
 
 .floor .floor_box .floor_main {

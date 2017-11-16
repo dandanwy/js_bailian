@@ -359,10 +359,54 @@ body {
   border: 1px solid #cccccc;
 }
 
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .prompt {
+  margin-left: 10px;
+  line-height: 36px;
+  float: left;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .prompt li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: 'Microsoft YaHei';
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .prompt li i {
+  float: left;
+  width: 16px;
+  line-height: 0px;
+  height: 16px;
+  margin-top: 10px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .prompt li span {
+  float: left;
+  margin-left: 8px;
+  display: inline;
+  line-height: 36px;
+  padding-right: 6px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .prompt li .strength-1 {
+  color: #ffffff;
+  display: inline-block;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  margin-left: 2px;
+  margin-top: 8px;
+  text-align: center;
+  width: 24px;
+  background: #ccc;
+}
+
 #main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-data .register-code {
   float: left;
   width: 90px;
   height: 36px;
+  line-height: 36px;
+  text-align: center;
   margin: 0 11px 0 10px;
   background: pink;
 }
@@ -429,4 +473,25 @@ body {
 
 #main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .loginPerfect-remember a {
   color: #0088ca !important;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .register-button {
+  padding-left: 134px;
+  height: 36px;
+  overflow: hidden;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .register-button .sub {
+  width: 300px;
+  margin-left: 6px;
+}
+
+#main_register .main .main_center .center_bottom .registered-info form .registered .loginPerfect-element .register-button .btn-primary {
+  color: #ffffff;
+  background: #e6133c;
+  font-size: 16px;
+  height: 36px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
 }

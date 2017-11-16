@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 11:27:41
+* @Last Modified time: 2017-11-16 11:29:23
 */
 
 require.config({
@@ -261,7 +261,7 @@ require(['common','jquery'],function(com,$){
             $("#floor8 .floor_slidew ul").css({"margin-left":0});
         });
     }
-    // var timer = setInterval(scroll,3000);
+    var timer = setInterval(scroll,3000);
     // $("#floor1 .floor_slidew ul").on('mouseenter',function(){
     //     // $("#floor1 .floor_slidew ul").stop();
     // });

@@ -23,6 +23,35 @@ function randomColor(){
 	return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
 
+
+/**
+ * [四位随机数，字母和数字组合]
+ * @return {[type]} [description]
+ */
+function rand(){
+    function randomNumber(min,max){
+        return parseInt(Math.random()*(max-min+1)+min);
+    }
+    // var num1 = randomNumber(48,57);
+    var arr = [];
+    for(var i=0;i<4;i++){
+        var num1 = randomNumber(0,2);
+        if(num1 == 0){
+            var asc = randomNumber(48,57);
+            arr.push(String.fromCharCode(asc));
+        }else if(num1 == 1){
+            var asc = randomNumber(97,122);
+            arr.push(String.fromCharCode(asc));
+        }else if(num1 == 2){
+            var asc = randomNumber(65,90);
+            arr.push(String.fromCharCode(asc));
+        }
+    }
+    return arr.join('');
+}
+
+
+
 /**
  * [获取元素样式]
  * @param  {Element} ele  [需要获取样式的元素]

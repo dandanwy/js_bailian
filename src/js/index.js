@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 09:01:58
+* @Last Modified time: 2017-11-16 09:23:50
 */
 
 require.config({
@@ -209,14 +209,23 @@ require(['common','jquery'],function(com,$){
     // 楼梯图片左移动画
     var $floor_main = $('.floor_main');
     $floor_main.on('mouseenter','img',function(){
-        // $(this).css({'position':'absolute'});
         $(this).stop().animate({left:-10}, 300);
     });
 
     $floor_main.on('mouseleave','img',function(){
-        // $(this).css({'position':'absolute'});
         $(this).stop().animate({left:0}, 300);
     });
 
+    // 楼梯图片淡入淡出动画
+    // 在这里遇到一个问题，如果委托写img会出不来效果
+    var $floor_mainb_b = $('.floor_mainb_b');
+    $floor_mainb_b.on('mouseenter','a',function(){
+        $(this).fadeTo(300,0.5);
+        console.log(444);
+    });
+    $floor_mainb_b.on('mouseleave','a',function(){
+        $(this).fadeTo(300,1);
+        console.log(444);
+    });
 });
 

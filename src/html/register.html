@@ -27,7 +27,7 @@
                 </div>
                 <div class="center_bottom">
                     <div class="registered-info">
-                        <form action="post" id="formRegister">
+                        <form id="formRegister"  onSubmit="return false;">
                             <div class="registered">
                                 <div class="loginPerfect-element">
                                     <div class="loginPerfect-data clearfix">
@@ -196,7 +196,8 @@
                                     </div>
                                     <div class="loginPerfect-remember">
                                         <label for="">
-                                            <i class="clicked"></i>
+                                            <!-- <i class="clicked"></i> -->
+                                            <input type="checkbox" class="clicked" checked="true" />
                                             <span>我已阅读并同意</span>
                                         </label>
                                         <a href="#">《百联通会员注册协议》</a>

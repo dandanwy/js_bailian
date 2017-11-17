@@ -112,6 +112,11 @@
 #main_login .login_cont .login_main_center ul li .login-item .ml-img {
   margin-left: 10px;
   float: left;
+  background: pink;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
 }
 
 #main_login .login_cont .login_main_center ul li .login-font {

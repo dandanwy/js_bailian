@@ -1522,6 +1522,7 @@ $floor8:#cde2ff;
 .alsolike{
     width: 1200px;
     margin: 0 auto;
+    clear:both;
     .featured_tit{
         margin: 0 0 8px 235px;
         text-indent: -230px;
@@ -1538,7 +1539,6 @@ $floor8:#cde2ff;
         }
     }
     .like_class{
-        height: 320px;
         margin-bottom: 22px;
         li{
             float: left;
@@ -1547,10 +1547,15 @@ $floor8:#cde2ff;
             position: relative;
             width: 230px;
             background: #fff;
+            margin-top:10px;
             .pro-show {
                 min-height: 320px;
                 width: 230px;
                 background: #fff;
+                transition: all 1s;
+                &:hover{
+                    box-shadow: 1px 0 6px #e4e4e4, 0 1px 6px #e4e4e4, -1px 0 6px #e4e4e4, 0 -1px 6px #e4e4e4;
+                }
                 .pro-img{
                     height: 200px;
                     width: 200px;
@@ -1575,10 +1580,24 @@ $floor8:#cde2ff;
                     position: relative;
                     .money-fl {
                         color: #e6133c;
-                        float: left;
+                        // float: left;
                         font-family: Verdana,Geneva,sans-serif;
                         font-size: 12px;
                         line-height: 26px;
+                        .geta {
+                            float: right;
+                            height: 20px;
+                            margin-top: 3px;
+                            line-height: 18px;
+                            color: rgb(153, 153, 153);
+                            padding: 0px 10px 0px 25px;
+                            background: url('../img/guess_ic1.jpg') 7px 4px no-repeat;
+                            border-width: 1px;
+                            border-style: solid;
+                            border-color: rgb(238, 238, 238);
+                            border-image: initial;
+                            border-radius: 11px;
+                        }
                     }
                 }
             }

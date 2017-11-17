@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-15 20:05:26
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-17 10:17:44
+* @Last Modified time: 2017-11-17 10:29:21
 */
 
 require.config({
@@ -214,7 +214,7 @@ require(['common','jquery'],function(com,$){
             mobile_val = $mobile.get(0).value;
             email_val = $email.get(0).value;
 
-            // 发起请求
+            // 发起请求,添加到数据库
             var xhr = new XMLHttpRequest();
             xhr.onload = function(){
                 if(xhr.status === 200 || xhr.status === 304){

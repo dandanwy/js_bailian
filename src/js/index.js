@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-16 11:29:23
+* @Last Modified time: 2017-11-17 13:06:43
 */
 
 require.config({
@@ -265,5 +265,46 @@ require(['common','jquery'],function(com,$){
     // $("#floor1 .floor_slidew ul").on('mouseenter',function(){
     //     // $("#floor1 .floor_slidew ul").stop();
     // });
+    
+
+
+    // 猜你喜欢数据生成
+    var xhr = new XMLHttpRequest();
+
+    xhr.onload = function(){
+        if(xhr.status === 200 || xhr.status === 304){
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+            var ol = document.createElement('ol');
+            ol.className = 'like_class clearfix';
+            var olikes1 = $('#olikes1').get(0);
+            ol.innerHTML = res.map(function(item,idx){
+                return `
+                    <li>
+                        <div class="pro-show">
+                            <div class="pro-img">
+                                <a href="#"><img src="${item.imgurl}" alt="" /></a>
+                            </div>
+                            <div class="pro-name">
+                                <a href="#">${item.title}</a>
+                            </div>
+                            <div class="pro-money">
+                                <div class="money-fl">
+                                    <span>${item.price}</span>
+                                    <a href="" class="geta">收藏</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                `;
+            }).join('');
+            olikes1.appendChild(ol);
+        }
+    }
+
+    xhr.open('get','http://localhost:1111/api/alsolike.php',true);
+    xhr.send();
+
+
 });
 

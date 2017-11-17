@@ -505,6 +505,9 @@
                     padding-bottom: 0;
                     float: left;
                     display: inline;
+                    &:hover{
+                        border: 1px solid #e6133c;;
+                    }
                     .pro-icon {
                         position: absolute;
                         right: 2px;
@@ -594,12 +597,29 @@
                             float: left;
                             color: #999;
                         }
+                        .pro-assess-left {
+                            float: left;
+                            background: url('../img/w13-icon.png') no-repeat left;
+                            padding-left: 20px;
+                            color: #08c;
+                        }
+                        .pro-assess-new {
+                            float: left;
+                            background: url('../img/list-praise.png') no-repeat left;
+                            padding-left: 18px;
+                            color: #ff4c61;
+                            margin-left: 12px;
+                        }
                     }
                     .pro-button {
                         padding: 4px 0 14px;
                         display: block;
                         button{
                             width: 100%;
+                            &:hover{
+                                    background: #e6133c;
+                                    color: #fff;
+                            }
                         }
                         .btn-primary {
                             border: 1px solid #e6133c;

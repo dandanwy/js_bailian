@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-15 20:05:37
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-17 14:34:55
+* @Last Modified time: 2017-11-17 15:09:24
 */
 
 require.config({
@@ -30,12 +30,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
             async:true,
             success:function(data){
                 console.log(data);
-                if(data === 'ok'){
-                    // alert('登录成功');
-                    location.href="../index.html";
-                }else if(data === 'fail'){
-                    alert('输入信息有误！');
-                }
+                
             }
         });
     });

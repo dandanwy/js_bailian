@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-18 18:56:38
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 20:30:23
+* @Last Modified time: 2017-11-18 21:00:05
 */
 
 require.config({
@@ -31,7 +31,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
         totle = goods.qty*goods.price;
         return `
        
-                <li class="select border-first clearfix">
+                <li class="select border-first clearfix" data-id="${goods.id}">
                     <div class="active-line">
                         <div class="point">•</div>
                         <div class="message">
@@ -72,7 +72,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                                 </div>
                             </div>
                             <div class="price-box">
-                                <div class="price">¥<span>${totle}</span></div>
+                                <div class="price_totle">¥<span>${totle}</span></div>
                             </div>
                             <div class="action-box">
                                 <a href="" class="add-favourite">移入收藏夹</a>
@@ -89,17 +89,22 @@ console.log(ul);
 
     $('.cart-table').append(ul);
 
-    var text = $('.text').get(0);
-    var num = text.value;
-
+    
     // 减少商品数量
-    $('.reduce').on('click',function(){
-        if(text1== 1){
+    $('em.reduce').on('click',function(){
+        var text = $(this).next('input').get(0);
+        var num = text.value;
+
+        // 点击的商品的id
+        var id = $(this).closest('li').get(0).getAttribute('data-id');
+        if(num <= 1){
             return;
-        }else{
+        }else if(num>1){
             num--;
-            text.value = num;
-            totle = 
+            $(this).next('input').get(0).value = num;
+            totle = num * $(this).closest('li').find('.price').find('span').text();
+            $(this).closest('li').find('.price_totle').find('span').text(totle);
+             
         }
     });
 

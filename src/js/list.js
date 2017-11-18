@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 15:05:24
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-17 18:51:15
+* @Last Modified time: 2017-11-18 14:55:57
 */
 
 require.config({
@@ -91,7 +91,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                                 <li data-id="${item.id}">
                                     <div class="pro-show">
                                         <div class="pro-icon"><img src="../img/icon-bl-3.png" alt="" /></div>
-                                        <div class="pro-img"><a><img src="${item.imgurl}" alt="" /></a></div>
+                                        <div class="pro-img"><a href="http://localhost:1111/html/goods.html?id=${item.id}"><img src="${item.imgurl}" alt="" /></a></div>
                                         <div class="pro-money">
                                             <div class="money-fl">￥${item.price}</div>
                                         </div>
@@ -123,7 +123,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                                 <li data-id="${item.id}">
                                     <div class="pro-show">
                                         <div class="pro-icon"><img src="../img/icon-bl-2.png" alt="" /></div>
-                                        <div class="pro-img"><a><img src="${item.imgurl}" alt="" /></a></div>
+                                        <div class="pro-img"><a href="http://localhost:1111/html/goods.html?id=${item.id}"><img src="${item.imgurl}" alt="" /></a></div>
                                         <div class="pro-money">
                                             <div class="money-fl">￥${item.price}</div>
                                         </div>

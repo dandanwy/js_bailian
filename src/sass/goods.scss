@@ -1,3 +1,6 @@
+@import 'home.scss';
+body{background:#fff;}
+
 .commodity {
     overflow: hidden;
     .crumb {
@@ -275,7 +278,7 @@
                                 // height: 178px;
                                 // width:20px;
                                 // height:20px;
-                                background: red;
+                                background: #fff;
                                 z-index: 104;
                                 opacity: .5;
                                 -moz-opacity: .5;

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 18:53:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 14:58:49
+* @Last Modified time: 2017-11-18 15:47:15
 */
 
 
@@ -232,111 +232,138 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
 
             
             // 放大镜
-    function Arzoom(options){
-        var defaults = {
-            position:'right',
-            width:380,
-            height:410
-        }
+            function Arzoom(options){
+                var defaults = {
+                    position:'right',
+                    width:380,
+                    height:410
+                }
 
-        // 覆盖默认参数
-        var opt = Object.assign({},defaults,options);
-        this.init(opt);
-    }
-    Arzoom.prototype = {       
-        init(opt){
-            // 创建节点
-            // 绑定事件
-            // 大图一般为当前元素内图片的data-big属性，如果没有则直接使用该图片的src属性
-            this.$small = $('.zoomimg');
-            
-            this.width = opt.width;
-            this.height = opt.height;
-            
+                // 覆盖默认参数
+                var opt = Object.assign({},defaults,options);
+                this.init(opt);
+            }
+            Arzoom.prototype = {       
+                init(opt){
+                    // 创建节点
+                    // 绑定事件
+                    // 大图一般为当前元素内图片的data-big属性，如果没有则直接使用该图片的src属性
+                    this.$small = $('.zoomimg');
+                    
+                    this.width = opt.width;
+                    this.height = opt.height;
+                    
 
-            this.$small.get(0).onmouseenter = function(){
-                this.show();
-            }.bind(this);
+                    this.$small.get(0).onmouseenter = function(){
+                        this.show();
+                    }.bind(this);
 
-            this.$small.get(0).onmouseleave = function(){
-                this.hide();
-            }.bind(this);
+                    this.$small.get(0).onmouseleave = function(){
+                        this.hide();
+                    }.bind(this);
 
-            this.$small.get(0).onmousemove = function(e){
-                this.move(e.clientX,e.clientY);
-            }.bind(this);
-            
-        },
+                    this.$small.get(0).onmousemove = function(e){
+                        this.move(e.clientX,e.clientY);
+                    }.bind(this);
+                    
+                },
 
-        show(){
-            // hover上去图形
-            this.$minzoom = $('<span/>').addClass('minzoom');
-            this.$smallImg = $('.zoomimg').find('img');
-            this.$small.append(this.$minzoom);
+                show(){
+                    // hover上去图形
+                    this.$minzoom = $('<span/>').addClass('minzoom');
+                    this.$smallImg = $('.zoomimg').find('img');
+                    this.$small.append(this.$minzoom);
 
-            this.$zoomdiv = $('<div/>').addClass('zoomdiv');
-            this.$bigImg = $('<img/>');
-            var bigsrc = this.$small.find('img').get(0).getAttribute('data-big');
-            this.$bigImg.attr({src:bigsrc});
-            this.$zoomdiv.append(this.$bigImg);
-            $('#preview').append(this.$zoomdiv);
+                    this.$zoomdiv = $('<div/>').addClass('zoomdiv');
+                    this.$bigImg = $('<img/>');
+                    var bigsrc = this.$small.find('img').get(0).getAttribute('data-big');
+                    this.$bigImg.attr({src:bigsrc});
+                    this.$zoomdiv.append(this.$bigImg);
+                    $('#preview').append(this.$zoomdiv);
 
-            this.$bigImg[0].onload = function(){
-                // 计算大图与小图比率
-                this.ratio = this.$bigImg.outerWidth()/this.$smallImg.outerWidth();
-                
-                // 设置放大镜的尺寸
-                // 与大图显示区域等比例
-                this.$minzoom.css({
-                    width:this.width/this.ratio,
-                    height:this.height/this.ratio
+                    this.$bigImg[0].onload = function(){
+                        // 计算大图与小图比率
+                        this.ratio = this.$bigImg.outerWidth()/this.$smallImg.outerWidth();
+                        
+                        // 设置放大镜的尺寸
+                        // 与大图显示区域等比例
+                        this.$minzoom.css({
+                            width:this.width/this.ratio,
+                            height:this.height/this.ratio
+                        });
+
+                    }.bind(this);
+                },
+                hide(){
+                    this.$minzoom.remove();
+                    this.$zoomdiv.remove();
+                },
+                move(x,y){
+                    // 计算放大镜移动过的距离
+                    var left = x - $('.zoomimg').offset().left -  this.$minzoom.outerWidth()/2 +window.scrollX;
+                    var top = y - $('.zoomimg').offset().top -  this.$minzoom.outerHeight()/2 +window.scrollY;
+
+                    console.log(left,top);
+
+                    // 限定left,top值
+                    if(left<0){
+                        left = 0;
+                    }else if(left > this.$smallImg.outerWidth()-this.$minzoom.outerWidth()){
+                        left = this.$smallImg.outerWidth()-this.$minzoom.outerWidth()
+                    }
+
+                    if(top<0){
+                        top = 0;
+                    }else if(top > this.$smallImg.outerHeight()-this.$minzoom.outerHeight()){
+                        top = this.$smallImg.outerHeight()-this.$minzoom.outerHeight()
+                    }
+
+                    this.$minzoom.css({
+                        left:left,
+                        top:top
+                    });
+
+                    // 大图移动
+                    this.$bigImg.css({
+                        left:-left*this.ratio,
+                        top:-top*this.ratio
+                    })
+
+                    console.log(left*this.ratio,top*this.ratio);
+                }
+            }
+            // // 重新设置constructor属性
+            Object.defineProperty(Arzoom.prototype,'constructor',{value:Arzoom});
+            new Arzoom();
+
+            // 飞入购物车
+            $('#addCart').on('click',function(){
+                var $img = $('.zoomimg').children('img');
+
+                var $cartNum = $('#cartNum');
+                // 1>复制当前商品图片(用于实现动画效果)
+                var $cloneImg = $img.clone();
+
+                // 给复制图片设置样式
+                $cloneImg.css({
+                    position:'absolute',
+                    top:$img.offset().top,
+                    left:$img.offset().left,
+                    width:$img.width()
                 });
+                // 把图片写入页面
+                $cloneImg.appendTo('body');
 
-            }.bind(this);
-        },
-        hide(){
-            this.$minzoom.remove();
-            this.$zoomdiv.remove();
-        },
-        move(x,y){
-            // 计算放大镜移动过的距离
-            var left = x - $('.zoomimg').offset().left -  this.$minzoom.outerWidth()/2 +window.scrollX;
-            var top = y - $('.zoomimg').offset().top -  this.$minzoom.outerHeight()/2 +window.scrollY;
+                // 动画效果:必须写入页面才会显示动画效果
+                $cloneImg.animate({left:$cartNum.offset().left,top:$cartNum.offset().top,width:100},function(){
+                    //删除复制的图片
+                    $cloneImg.remove();
 
-            console.log(left,top);
+                })
 
-            // 限定left,top值
-            if(left<0){
-                left = 0;
-            }else if(left > this.$smallImg.outerWidth()-this.$minzoom.outerWidth()){
-                left = this.$smallImg.outerWidth()-this.$minzoom.outerWidth()
-            }
 
-            if(top<0){
-                top = 0;
-            }else if(top > this.$smallImg.outerHeight()-this.$minzoom.outerHeight()){
-                top = this.$smallImg.outerHeight()-this.$minzoom.outerHeight()
-            }
 
-            this.$minzoom.css({
-                left:left,
-                top:top
             });
-
-            // 大图移动
-            this.$bigImg.css({
-                left:-left*this.ratio,
-                top:-top*this.ratio
-            })
-
-            console.log(left*this.ratio,top*this.ratio);
-        }
-    }
-    // // 重新设置constructor属性
-    Object.defineProperty(Arzoom.prototype,'constructor',{value:Arzoom});
-    new Arzoom();
-
-
         }
     });
 

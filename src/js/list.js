@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 15:05:24
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 14:55:57
+* @Last Modified time: 2017-11-18 16:46:05
 */
 
 require.config({
@@ -13,6 +13,8 @@ require.config({
 
 require(['common','ajax','jquery'],function(com,oAjax,$){
 
+   // 链接右边栏
+    $('.right_lan').load('../html/goods.html .right-slidebar');
     ajax({
             type:'get',
             url:'http://localhost:1111/api/list.php',

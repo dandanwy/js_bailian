@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-13 14:30:33
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-17 13:06:43
+* @Last Modified time: 2017-11-18 15:58:26
 */
 
 require.config({
@@ -11,6 +11,10 @@ require.config({
     }
 })
 require(['common','jquery'],function(com,$){
+
+    // 链接右边栏
+    $('.right_lan').load('../html/goods.html .right-slidebar');
+
     // header
     // 头部搜索
     var $search_txt = $('.search_txt');
@@ -56,6 +60,7 @@ require(['common','jquery'],function(com,$){
         $(this).stop().find('span').animate({top:35}, 50);
         $(this).stop().next('.doudou').animate({top:0}, 300);
     });
+
 
     // banner  淡入淡出 
     function Fade(options){

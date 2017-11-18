@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 18:53:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 15:47:15
+* @Last Modified time: 2017-11-18 18:55:50
 */
 
 
@@ -303,8 +303,6 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                     var left = x - $('.zoomimg').offset().left -  this.$minzoom.outerWidth()/2 +window.scrollX;
                     var top = y - $('.zoomimg').offset().top -  this.$minzoom.outerHeight()/2 +window.scrollY;
 
-                    console.log(left,top);
-
                     // 限定left,top值
                     if(left<0){
                         left = 0;
@@ -329,7 +327,6 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                         top:-top*this.ratio
                     })
 
-                    console.log(left*this.ratio,top*this.ratio);
                 }
             }
             // // 重新设置constructor属性
@@ -358,12 +355,64 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                 $cloneImg.animate({left:$cartNum.offset().left,top:$cartNum.offset().top,width:100},function(){
                     //删除复制的图片
                     $cloneImg.remove();
+                });
 
-                })
+                var datalist =Cookie.get('goodslist');
+                if(!datalist){
+                    datalist = [];
+                }else{
+                    datalist = JSON.parse(datalist);
+                }
 
+                // 判断当前商品是否已经存在cookie里面了
+                var currentIdx;
+                var res = datalist.some(function(goods,idx){
+                    currentIdx = idx;
+                    return goods.id == id;
+                });
 
+                // 如果商品已经存在，则商品数量加1，否则添加商品
+                    if(res){
+                        datalist[currentIdx].qty = datalist[currentIdx].qty*1 + $('#itemnumber').get(0).value*1;
+                    }else{
+                        // 获取此点击商品信息(对象方式存储)
+                        var goods = {
+                            id:id,
+                            qty:$('#itemnumber').get(0).value,
+                        };
+                        // 把当前商品添加到数组中
+                        datalist.push(goods);
+                    }
+
+                    Cookie.set('goodslist',JSON.stringify(datalist));
 
             });
+
+
+            // 购买数量增加减少
+            var buy_num = $('#itemnumber').get(0).value;
+            $('#reduce').on('click',function(){
+                if(buy_num == 1){
+                    $(this).get(0).className = 'btn-down-disable';
+                    return;
+                }else{
+                    $(this).get(0).className = 'btn-reduce';
+                    buy_num--;
+                    $('#itemnumber').get(0).value = buy_num;
+                }
+                
+            });
+
+            $('#addnum').on('click',function(){
+                buy_num++;
+                $('#itemnumber').get(0).value = buy_num;
+                if(buy_num>1){
+                    $('#reduce').get(0).className = 'btn-reduce';
+                }               
+            });
+
+
+
         }
     });
 

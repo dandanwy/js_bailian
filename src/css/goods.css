@@ -2354,9 +2354,27 @@ body {
   background: #fff url("../img/icons-arrow3.png") no-repeat scroll 5px -6px;
 }
 
+.commodity .product-intro .intro-left .detail dl .item-quantity .btn-reduce:hover {
+  border: 1px solid #999;
+  background: #fff url("../img/icons-arrow2.png") no-repeat scroll 5px -6px;
+  cursor: pointer;
+}
+
+.commodity .product-intro .intro-left .detail dl .item-quantity .btn-down-disable {
+  bottom: -1px;
+  background: #eee url("../img/icons-arrow4.png") no-repeat scroll 5px -6px;
+  cursor: not-allowed;
+}
+
 .commodity .product-intro .intro-left .detail dl .item-quantity .btn-add {
   top: -1px;
   background: #fff url("../img/icons-arrow3.png") no-repeat scroll 5px 8px;
+}
+
+.commodity .product-intro .intro-left .detail dl .item-quantity .btn-add:hover {
+  border: 1px solid #999;
+  background: #fff url("../img/icons-arrow2.png") no-repeat scroll 5px 8px;
+  cursor: pointer;
 }
 
 .commodity .product-intro .intro-left .detail dl .item-quantity input {

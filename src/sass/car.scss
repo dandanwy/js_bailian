@@ -98,8 +98,8 @@
                         margin-top: 17px;
                         float: left;
                         display: inline;
-                        width: 10px;
-                        height: 10px;
+                        // width: 10px;
+                        // height: 10px;
                         border-radius: 3px;
                         cursor: pointer;
                         border: 1px solid #999;
@@ -179,8 +179,8 @@
                             margin-top: 12px;
                             float: left;
                             display: inline;
-                            width: 10px;
-                            height: 10px;
+                            // width: 10px;
+                            // height: 10px;
                             border-radius: 3px;
                             cursor: pointer;
                             border: 1px solid #999;
@@ -227,6 +227,7 @@
                     float: left;
                     display: inline;
                     .select {
+                        border-bottom:1px solid #ccc;
                         background: url('../img/cart-line-first.png') #fffaf1 left top no-repeat;
                         .chk {
                             border-color: #d62233;
@@ -307,8 +308,8 @@
                                     .chk {
                                         float: left;
                                         display: inline;
-                                        width: 10px;
-                                        height: 10px;
+                                        // width: 10px;
+                                        // height: 10px;
                                         border-radius: 3px;
                                         cursor: pointer;
                                         border: 1px solid #999;
@@ -525,6 +526,7 @@
                     }
                 }
                 .select{
+
                     .chk {
                         border-color: #d62233;
                         background: url('../img/select.png') #d62233 no-repeat;

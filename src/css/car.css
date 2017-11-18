@@ -112,8 +112,6 @@
   margin-top: 17px;
   float: left;
   display: inline;
-  width: 10px;
-  height: 10px;
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #999;
@@ -201,8 +199,6 @@
   margin-top: 12px;
   float: left;
   display: inline;
-  width: 10px;
-  height: 10px;
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #999;
@@ -255,6 +251,7 @@
 }
 
 #main .warp .cart-table .cart-table-list .select {
+  border-bottom: 1px solid #ccc;
   background: url("../img/cart-line-first.png") #fffaf1 left top no-repeat;
 }
 
@@ -348,8 +345,6 @@
 #main .warp .cart-table .cart-table-list li .border-last .cart-table-line .chk-line .chk {
   float: left;
   display: inline;
-  width: 10px;
-  height: 10px;
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #999;

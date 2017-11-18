@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 18:53:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 18:55:50
+* @Last Modified time: 2017-11-18 20:04:07
 */
 
 
@@ -357,34 +357,56 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                     $cloneImg.remove();
                 });
 
-                var datalist =Cookie.get('goodslist');
-                if(!datalist){
-                    datalist = [];
-                }else{
-                    datalist = JSON.parse(datalist);
-                }
 
-                // 判断当前商品是否已经存在cookie里面了
-                var currentIdx;
-                var res = datalist.some(function(goods,idx){
-                    currentIdx = idx;
-                    return goods.id == id;
+                // 请求数据写入cookie
+                ajax({
+                    type:'get',
+                    url:'http://localhost:1111/api/car.php',
+                    data:{id:id},
+                    async:true,
+                    success:function(data){
+                        console.log(data);
+                        var datalist =Cookie.get('goodslist');
+                        if(!datalist){
+                            datalist = [];
+                        }else{
+                            datalist = JSON.parse(datalist);
+                        }
+
+                        // 判断当前商品是否已经存在cookie里面了
+                        var currentIdx;
+                        var res = datalist.some(function(goods,idx){
+                            currentIdx = idx;
+                            return goods.id == id;
+                        });
+
+                        // 如果商品已经存在，则商品数量加1，否则添加商品
+                        if(res){
+                            datalist[currentIdx].qty = datalist[currentIdx].qty*1 + $('#itemnumber').get(0).value*1;
+                        }else{
+                            // 获取此点击商品信息(对象方式存储)
+                            var goods = {
+                                id:data[0],
+                                qty:$('#itemnumber').get(0).value,
+                                imgurl:data[1],
+                                price:data[2],
+                                details:data[3]
+                            };
+                            // 把当前商品添加到数组中
+                            datalist.push(goods);
+                        }
+
+                        Cookie.set('goodslist',JSON.stringify(datalist));
+
+
+                    }
                 });
 
-                // 如果商品已经存在，则商品数量加1，否则添加商品
-                    if(res){
-                        datalist[currentIdx].qty = datalist[currentIdx].qty*1 + $('#itemnumber').get(0).value*1;
-                    }else{
-                        // 获取此点击商品信息(对象方式存储)
-                        var goods = {
-                            id:id,
-                            qty:$('#itemnumber').get(0).value,
-                        };
-                        // 把当前商品添加到数组中
-                        datalist.push(goods);
-                    }
+                
 
-                    Cookie.set('goodslist',JSON.stringify(datalist));
+                
+
+                
 
             });
 

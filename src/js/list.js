@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 15:05:24
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-19 18:24:02
+* @Last Modified time: 2017-11-19 18:34:41
 */
 
 require.config({
@@ -352,6 +352,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
                     data_sort(data);
 
                 }
+        
             });
             sort = 1;
         }else if(sort == 1){//降序
@@ -367,6 +368,7 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
 
                 }
             });
+            
             sort = 0;
         }
     });

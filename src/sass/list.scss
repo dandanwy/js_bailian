@@ -1,5 +1,8 @@
 @import 'home.scss';
 @import 'goods.scss';
+body{
+    background:#fff;
+}
 
 .main-content{
     position: relative;
@@ -12,7 +15,7 @@
             line-height: 26px;
             padding: 15px 0;
             float: left;
-            width: 1050px;
+            width: 850px;
             position: relative;
             .pathclip {
                 clip: rect(0,auto,1050px,0);
@@ -633,6 +636,42 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .page-show {
+        text-align: center;
+        height: 26px;
+        padding-top: 70px;
+        clear: both;
+        font-family: 'Microsoft YaHei';
+        .page {
+            display: inline-block;
+            text-align: center;
+            font-size: 12px;
+            white-space: nowrap;
+            li {
+                margin: 0 2px;
+                display: inline-block;
+                height: 26px;
+                a{
+                    background: #eee;
+                    height: 24px;
+                    min-width: 24px;
+                    border: 1px solid #ccc;
+                    color: #333;
+                    line-height: 24px;
+                    text-align: center;
+                    display: block;
+                }
+            }
+            .on{
+                a{
+                    background: #e6133c;
+                    color: #fff;
+                    border: 1px solid #e6133c;
+                }
+                
             }
         }
     }

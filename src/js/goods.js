@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-11-17 18:53:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-18 20:04:07
+* @Last Modified time: 2017-11-19 17:22:56
 */
 
 
@@ -438,7 +438,9 @@ require(['common','ajax','jquery'],function(com,oAjax,$){
         }
     });
 
-
+    $('.shopcar').on('click',function(){
+        location.href = 'http://localhost:1111/html/car.html';
+    });
 
     
 });

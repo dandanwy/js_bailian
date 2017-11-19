@@ -5545,6 +5545,14 @@ body {
   background-position: 0 center;
 }
 
+.main-content .sequence .sequence-left .listclass .on i {
+  background-position: -14px center;
+}
+
+.main-content .sequence .sequence-left .listclass .down i {
+  background-position: -21px center;
+}
+
 .main-content .sequence .left-money {
   float: left;
   margin-left: 10px;
